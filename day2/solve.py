@@ -25,3 +25,17 @@ for line in inp:
         valid_passwords += 1
 
 print("Part One: Valid passwords - {}".format(valid_passwords))
+
+valid_passwords = 0
+for line in inp:
+    pos1 = int(line.split('-')[0]) - 1
+    pos2 = int(line.split('-')[1].split(' ')[0]) - 1
+#    print("min_uses: {}, max_uses: {}".format(min_uses, max_uses))
+    letter = line.split(' ')[1][0]
+#    print(letter)
+    password = line.split(':')[1][1:]
+#    print(password)
+    if (password[pos1] == letter) ^ (password[pos2] == letter):
+        valid_passwords += 1
+
+print("Part Two: Valid passwords - {}".format(valid_passwords))
