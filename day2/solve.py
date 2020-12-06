@@ -15,7 +15,6 @@ for line in inp:
 #    print(letter)
     password = line.split(':')[1][1:]
 #    print(password)
-    num_occurances = 0
     uses = 0
     for char in password:
         if char == letter:
